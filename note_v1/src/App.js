@@ -6,7 +6,7 @@ import Note from "./components/Note.jsx";
 import notes from "./components/notes.js";
 
 function createNotes(noteItem){
-  return <Note title={noteItem.title} content={noteItem.content}/>;
+  return <Note key={noteItem.key} title={noteItem.title} content={noteItem.content}/>;
 }
 
 function App() {
