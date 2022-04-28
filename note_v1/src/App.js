@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Note from "./components/Note";
@@ -6,17 +6,45 @@ import CreateArea from "./components/CreateArea";
 
 function App() {
 
+  //Ajouter une nouvelle note à un tableau.
+  const [notes, setNotes] = useState ([]);
+
 
 function addNote(note) {
-console.log(note);
+//console.log(note);
+setNotes(prevNotes =>{
+ return [...prevNotes,note];
+})
 }
+
+function deleteNote(id){
+//console.log("Delete was trigger");
+setNotes(prevNotes =>{
+  //filter function 3 arguments
+  return prevNotes.filter((noteItem, index) =>{
+    //index match id was deleted
+return index !== id;
+  });
+});
+
+}
+
 
 
   return (
     <div>
       <Header />
       <CreateArea onAdd={addNote} />
-
+{notes.map((noteItem, index) => {
+  return <Note
+  key={index}
+  id={index}
+  title={noteItem.title}
+  content={noteItem.content}
+  onDelete={deleteNote}
+  
+  />
+})}
       <Note key={1} title="Note title" content="Note content" />
       <Footer />
     </div>

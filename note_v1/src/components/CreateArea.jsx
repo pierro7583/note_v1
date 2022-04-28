@@ -21,6 +21,7 @@ setNote(prevNote =>{
 })
 }
 
+
 //function envoie note lors du click + evite le reload a chaque click
 function submitNote(event){
   props.onAdd(note);
