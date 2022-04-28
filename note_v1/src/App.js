@@ -10,10 +10,10 @@ function App() {
   const [notes, setNotes] = useState ([]);
 
 
-function addNote(note) {
+function addNote(newNote) {
 //console.log(note);
 setNotes(prevNotes =>{
- return [...prevNotes,note];
+ return [...prevNotes,newNote];
 })
 }
 
@@ -36,7 +36,8 @@ return index !== id;
       <Header />
       <CreateArea onAdd={addNote} />
 {notes.map((noteItem, index) => {
-  return <Note
+  return (
+  <Note
   key={index}
   id={index}
   title={noteItem.title}
@@ -44,8 +45,9 @@ return index !== id;
   onDelete={deleteNote}
   
   />
+  );
 })}
-      <Note key={1} title="Note title" content="Note content" />
+      
       <Footer />
     </div>
   );

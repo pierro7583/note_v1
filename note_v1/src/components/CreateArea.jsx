@@ -25,13 +25,23 @@ setNote(prevNote =>{
 //function envoie note lors du click + evite le reload a chaque click
 function submitNote(event){
   props.onAdd(note);
+
+setNote({
+title: "",
+content: ""
+});
+
 event.preventDefault();
 }
 
   return (
     <div>
       <form>
-        <input name="title" onChange={handleChange} value={note.title} placeholder="Title" />
+        <input 
+        name="title" 
+        onChange={handleChange} 
+        value={note.title} 
+        placeholder="Title" />
 
         <textarea 
         name="content" onChange={handleChange} 
