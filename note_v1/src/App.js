@@ -4,7 +4,51 @@ import Footer from "./components/Footer";
 import Note from "./components/Note";
 import CreateArea from "./components/CreateArea";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function App() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   //Ajouter une nouvelle note à un tableau.
   const [notes, setNotes] = useState ([]);
@@ -47,7 +91,7 @@ return index !== id;
   />
   );
 })}
-      
+    
       <Footer />
     </div>
   );
@@ -58,12 +102,13 @@ export default App;
 // Note instruction step by step
 
 //1. Implémentez la fonctionnalité d'ajout de note.
-//- Crée une constante qui garde une trace du titre et du contenu.
-//- Renvoyez la nouvelle note à l'application.
-//- Ajouter une nouvelle note à un tableau.
-//- Prendre un tableau et restituer des composants Note séparés pour chaque élément.
+//- Crée une constante qui garde une trace du titre et du contenu. ok
+//- Renvoyez la nouvelle note à l'application.    ok
+//- Ajouter une nouvelle note à un tableau.   ok
+//- Prendre un tableau et restituer des composants Note séparés pour chaque élément.  ok
 
-//2. Implémentez la fonctionnalité de suppression de note.
-//- Rappel du composant Note pour déclencher une fonction de suppression.
-//- Utilisez la fonction de filtre pour filtrer l'élément qui doit être supprimé.
-//- Transmettez un identifiant au composant Note, retransmettez-le à l'application lors de la suppression.
+//2. Implémentez la fonctionnalité de suppression de note.   ok
+//- Rappel du composant Note pour déclencher une fonction de suppression.   ok
+//- Utilisez la fonction de filtre pour filtrer l'élément qui doit être supprimé.   ok
+//- Transmettez un identifiant au composant Note, retransmettez-le à l'application lors de la suppression.  ok
+
